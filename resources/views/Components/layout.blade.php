@@ -6,6 +6,7 @@
     <title>About</title>
 </head>
 <body>
-    <h1>about</h1>
+    <x-nav-link/>
+     {{$slot}}
 </body>
 </html>
