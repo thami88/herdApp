@@ -4,10 +4,16 @@
     </x-slot:heading>
 
    <h1 class="font-bold text-lg">
-    {{$job['title']}}
+    {{$job->title}}
    </h1>
    <p>
-    This job pays {{$job['salary']}} per year
+    This job pays {{$job->salary}} per year
+   </p>
+
+   <p class="mt-6">
+    <x-button href="/jobs/{{$job->id}}/edit">
+        Edit Job
+    </x-button>
    </p>
 
 </x-layout>
