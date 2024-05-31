@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
-use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
@@ -37,11 +36,12 @@ class JobController extends Controller
             'salary' => request('salary'),
             'employer_id' => 1
         ]);
+
         return redirect('/jobs');
     }
 
     public function edit(Job $job)
-    {
+    {   
         return view('jobs.edit', ['job'=> $job]);
     }
 
